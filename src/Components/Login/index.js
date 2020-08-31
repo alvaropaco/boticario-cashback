@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     width: theme.spacing(7),
     height: theme.spacing(7),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: 'white',
   },
   form: {
     width: '100%', // Fix IE 11 issue.

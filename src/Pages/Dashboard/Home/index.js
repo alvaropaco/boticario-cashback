@@ -5,7 +5,6 @@ import CashBack from '../../../Components/CashBack';
 function DashboardHome() {
   return (
     <div className="App">
-      
       <CashBack />
     </div>
   );

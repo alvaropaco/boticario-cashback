@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderiza component de CashBack 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <div
+    className="MuiCardContent-root makeStyles-bgBlue-5 makeStyles-bgBlue-6"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      Total de Cashback acumulado
+    </h2>
+    <p
+      className="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextSecondary"
+    >
+      R$ 100,00
+    </p>
+  </div>
+</div>
+`;

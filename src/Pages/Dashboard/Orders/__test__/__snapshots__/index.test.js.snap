@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderiza a página de Compras 1`] = `
+Array [
+  <h2>
+    Lista de Compras
+  </h2>,
+  <ul
+    className="MuiList-root makeStyles-root-1 MuiList-padding"
+  />,
+]
+`;

@@ -1,6 +1,5 @@
 import axios from 'axios';
 import Joi from 'joi';
-import moment from 'moment';
 
 export const loadOrders = async () => {
     const endpoint = `${process.env.REACT_APP_MOCK_SERVER}/compras`;
