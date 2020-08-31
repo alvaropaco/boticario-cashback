@@ -1,4 +1,4 @@
-# Desafio Boticaŕio Front-end
+# Desafio Boticario Front-end
 
 ### Requisitos de front-end:
 - Tela de cadastro de um novo revendedor(a) solicitando Nome completo, CPF,
