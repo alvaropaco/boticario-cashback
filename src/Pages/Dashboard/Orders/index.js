@@ -31,7 +31,8 @@ const Orders = () => {
     []
   );
 
-  function formatCurrency(number){
+  function formatCurrency(numberStr){
+    const number = +numberStr;
     var formatted = "R$ " + number.toFixed(2).replace(".",",");
     return formatted;
   }
@@ -41,7 +42,11 @@ const Orders = () => {
   }
 
   const getStatusLabel = statusCode => {
-    const statuses = ["Em validação", "Reprovado", "Aprovado"];
+    const statuses = {
+      0:"Em validação", 
+      1: "Reprovado", 
+      2: "Aprovado"
+    };
     return statuses[statusCode];
   }
   const getDateStr = timestamp => {

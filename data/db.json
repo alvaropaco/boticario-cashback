@@ -9,19 +9,19 @@
       "id": 1
     },
     {
-      "datetime": "1598846818314",
-      "code": 10000002,
-      "status": 2,
-      "amount": 212.23,
+      "datetime": 1596499200000,
+      "code": "20000011",
+      "amount": "50.3",
       "cashBackPercent": 0.01,
+      "status": 0,
       "id": 2
     },
     {
-      "datetime": "1598846864457",
-      "code": 10000003,
-      "status": 2,
-      "amount": 512.23,
-      "cashBackPercent": 0.1,
+      "datetime": 1597114800,
+      "code": "20000012",
+      "amount": "55",
+      "cashBackPercent": 0.01,
+      "status": 0,
       "id": 3
     }
   ],
