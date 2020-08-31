@@ -9,9 +9,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.20.0",
     "concurrently": "^5.3.0",
     "js-cookie": "^2.2.1",
     "json-server": "^0.16.1",
+    "json-server-auth": "^2.0.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -24,7 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:mock":"node_modules/.bin/json-server --port 3004 --watch data/db.json"
+    "watch:mock": "node_modules/.bin/json-server -m node_modules/json-server-auth --port 3004 --watch data/db.json"
   },
   "eslintConfig": {
     "extends": "react-app"

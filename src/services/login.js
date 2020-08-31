@@ -1,8 +1,15 @@
-const { default: Login } = require("../Components/Login")
+import axios from 'axios';
 
-export const login = ({ email, password }) => {
-    return {
-        token: null,
-        error: "Usuário e/ou senha inválidos."
+export const login = async (payload) => {
+    const endpoint = `${process.env.REACT_APP_MOCK_SERVER}/login`;
+    try {
+        const { data: { accessToken } } = await axios.post(endpoint, payload)
+        return {
+            token: accessToken,
+        }
+    } catch (error) {
+        return {
+            error: "Usuário e/ou senha inválidos."
+        }
     }
 }
