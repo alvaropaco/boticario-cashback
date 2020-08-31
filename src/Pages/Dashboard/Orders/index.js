@@ -52,7 +52,8 @@ const Orders = () => {
     return statuses[statusCode];
   }
   const getDateStr = timestamp => {
-    return moment(Date(timestamp)).format('DD/MM/YYYY');
+    const dt = new Date(Date.parse(timestamp))
+    return moment(dt).format('DD/MM/YYYY');
   }
 
   const renderOrdersList = orders => {

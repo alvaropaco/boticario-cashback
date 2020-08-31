@@ -1,28 +1,12 @@
 {
   "compras": [
     {
-      "datetime": "1598844185780",
-      "code": 10000001,
-      "status": 1,
-      "amount": 211.23,
-      "cashBackPercent": 0.002,
-      "id": 1
-    },
-    {
-      "datetime": 1596499200000,
-      "code": "20000011",
-      "amount": "50.3",
-      "cashBackPercent": 0.01,
-      "status": 0,
-      "id": 2
-    },
-    {
-      "datetime": 1597114800,
-      "code": "20000012",
+      "datetime": "2020-08-21",
+      "code": "20000022",
       "amount": "55",
       "cashBackPercent": 0.01,
       "status": 0,
-      "id": 3
+      "id": 8
     }
   ],
   "users": [

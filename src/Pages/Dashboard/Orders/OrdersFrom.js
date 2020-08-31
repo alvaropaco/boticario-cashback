@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
@@ -18,7 +19,7 @@ const initialState = () => {
 
 const OrdersForm = () => {
   const [ error, setError ] = useState(null);
-  const [ token, setToken ] = useState(null);
+  const [ data, setData ] = useState(null);
   const [values, setValues] = useState(initialState());
   
   const onchange = async e => {
@@ -31,15 +32,15 @@ const OrdersForm = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    const { token, error } = await create(values)
+    const { data, error } = await create(values)
     
     if(error) {
       await setError(error);
       setTimeout(() => { setError(null); }, 9000);
     }
-    
-    await setToken(token)
-    setTimeout(() => { setToken(null); }, 9000);
+
+    setData(data);
+    setTimeout(() => { setData(null); setValues(initialState()); }, 9000);
   }
 
   return (
@@ -92,8 +93,8 @@ const OrdersForm = () => {
             : <></>
           }
           {
-            token
-              ? <Alert severity="success">This is a success alert — check it out!</Alert>
+            data
+              ? <Alert severity="success">Compra cadastrada com sucesso! <Link to="/dashboard/orders">Ir para compras</Link></Alert>
               : <></>
           }
           <Button variant="contained" color="primary" onClick={onSubmit}>

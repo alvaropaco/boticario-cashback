@@ -22,14 +22,12 @@ const schema = Joi.object({
         .required(),
     amount: Joi.number()
         .required(),
-    datetime: Joi.number()
+    datetime: Joi.string()
     .required()});
 
 export const create = async (payload) => {
     const endpoint = `${process.env.REACT_APP_MOCK_SERVER}/compras`;
     try {
-        const datetime = new moment(payload.datetime);
-        payload.datetime = datetime.unix();
         const { error } = schema.validate(payload);
 
         payload.cashBackPercent = 0.01;
@@ -39,10 +37,10 @@ export const create = async (payload) => {
             throw error;
         }
         
-        const { data: { accessToken } } = await axios.post(endpoint, payload)
+        const { data } = await axios.post(endpoint, payload)
         
         return {
-            token: accessToken,
+            data
         }
     } catch (error) {
         debugger

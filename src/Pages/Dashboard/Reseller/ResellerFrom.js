@@ -94,7 +94,7 @@ const ResellerForm = () => {
           }
           {
             token
-              ? <Alert severity="success">This is a success alert — check it out!</Alert>
+              ? <Alert severity="success">Revendedor cadastrado.</Alert>
               : <></>
           }
           <Button variant="contained" color="primary" onClick={onSubmit}>
