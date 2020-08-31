@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import notFound from '../../static/images/404_website.svg';
 import '../../styles/Home.scss';
 
-function Home() {
+function NotFound() {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,4 +19,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default NotFound;
