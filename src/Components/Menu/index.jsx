@@ -149,7 +149,7 @@ const Menu = ({ children }) => {
             <ListItemIcon>{getIcon[0]}</ListItemIcon>
             <ListItemText primary="Cadastrar Revendedor" />
           </ListItem>
-          <ListItem button key="Ver Compras">
+          <ListItem button onClick={() => history.push('/dashboard/orders')} key="Ver Compras">
             <ListItemIcon>{getIcon[1]}</ListItemIcon>
             <ListItemText primary="Ver Compras" />
           </ListItem>

@@ -1,56 +1,28 @@
 {
-  "produtos": [
+  "compras": [
     {
-      "id": 1,
-      "nome": "Hambúrguer",
-      "descricao": "Pão, bife de hambúrguer 90g, salada e batata.",
-      "preco": 8.5,
-      "categoria_id": 1
+      "datetime": "1598844185780",
+      "code": 10000001,
+      "status": 1,
+      "amount": 211.23,
+      "cashBackPercent": 0.002,
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "X-Búrguer",
-      "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, salada e batata.",
-      "preco": 10.5,
-      "categoria_id": 1
+      "datetime": "1598846818314",
+      "code": 10000002,
+      "status": 2,
+      "amount": 212.23,
+      "cashBackPercent": 0.01,
+      "id": 2
     },
     {
-      "id": 3,
-      "nome": "X-Bacon",
-      "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
-      "preco": 12.5,
-      "categoria_id": 1
-    },
-    {
-      "id": 4,
-      "nome": "X-Tudo",
-      "descricao": "Pão, 2 bifes de hambúrguer 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
-      "preco": 14.5,
-      "categoria_id": 1
-    },
-    {
-      "id": 5,
-      "nome": "Coca cola 350ml",
-      "descricao": "",
-      "preco": 5.5,
-      "categoria_id": 2
-    },
-    {
-      "id": 6,
-      "nome": "Coca cola 600ml",
-      "descricao": "",
-      "preco": 7.5,
-      "categoria_id": 2
-    }
-  ],
-  "categorias": [
-    {
-      "id": 1,
-      "nome": "Hambúrgueres"
-    },
-    {
-      "id": 2,
-      "nome": "Refrigerantes"
+      "datetime": "1598846864457",
+      "code": 10000003,
+      "status": 2,
+      "amount": 512.23,
+      "cashBackPercent": 0.1,
+      "id": 3
     }
   ],
   "users": [
@@ -60,25 +32,11 @@
       "id": 1
     },
     {
-      "email": "alvaropaconeto@gmail.com",
-      "password": "$2a$10$iNis7RcxYdDcBClDvQSBzOK30fpbhDiTSJ.adQm07GqlOO2pBroz6",
-      "nome": "ALVARO AUGUSTO PACO NETO",
+      "email": "teste@teste.com",
+      "password": "$2a$10$o.O.tMRVmVMtSLHkyHAGlei0PL56enZt2LhMDqPxAh//juBRgRW0y",
+      "nome": "Teste",
       "cpf": "368.666.748-75",
       "id": 2
-    },
-    {
-      "email": "diana@diana.com",
-      "password": "$2a$10$fDG0cLTvHk/8onwGWVIhQeZRRjp7mkCE0fkGytpxEG4w/fl.2wntO",
-      "nome": "Diana",
-      "cpf": "548.273.152-99",
-      "id": 3
-    },
-    {
-      "email": "r@r.com",
-      "password": "$2a$10$XQKx6xk8EMeGp4gmUTssTOMfNGlP3IZdDMJKkuU1itzlld/CTaqM6",
-      "nome": "Regina",
-      "cpf": "117.917.401-11",
-      "id": 4
     }
   ]
 }
