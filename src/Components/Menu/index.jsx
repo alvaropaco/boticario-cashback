@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -20,6 +20,7 @@ import RecentActorsIcon from '@material-ui/icons/RecentActors';
 import ListIcon from '@material-ui/icons/List';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import Context from '../../store/Context';
 
 const drawerWidth = 240;
 
@@ -85,7 +86,8 @@ const Menu = ({ children }) => {
   const classes = useStyles();
   const theme = useTheme();
   const history = useHistory();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const { setToken } = useContext(Context);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -94,6 +96,11 @@ const Menu = ({ children }) => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const handleLogout = async () => {
+    await setToken({})
+    history.push('/')
+  }
 
   const getIcon = [<RecentActorsIcon />, <ListIcon />, <ShoppingCartIcon />]
 
@@ -161,7 +168,7 @@ const Menu = ({ children }) => {
         <Divider />
         <List>
           {['Sair'].map((text, index) => (
-            <ListItem button key={text}>
+            <ListItem button onClick={() => handleLogout()} key={text}>
               <ListItemIcon><ExitToAppIcon /></ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>

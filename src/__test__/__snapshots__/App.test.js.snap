@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renderiza a página de Compras 1`] = `
+exports[`renderiza o App 1`] = `
 <div
   className="App"
 >

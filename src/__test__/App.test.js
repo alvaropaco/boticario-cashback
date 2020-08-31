@@ -1,11 +1,17 @@
 import React from 'react';
 import App from '../App';
 import renderer from 'react-test-renderer';
+import { Router } from 'react-router-dom'
+import { createBrowserHistory } from "history";
 
-it('renderiza a página de Compras', () => {
+const history = createBrowserHistory();
+
+it('renderiza o App', () => {
     const tree = renderer
     .create(
-      <App />
+      <Router history={history}>
+        <App />
+      </Router>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
