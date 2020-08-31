@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
@@ -20,9 +19,7 @@ const initialState = () => {
 const OrdersForm = () => {
   const [ error, setError ] = useState(null);
   const [ token, setToken ] = useState(null);
-  const [values, setValues] = useState(initialState);
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const history = useHistory();
+  const [values, setValues] = useState(initialState());
   
   const onchange = async e => {
     const { value, name } = e.target;
@@ -46,7 +43,7 @@ const OrdersForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <Typography variant="h6" gutterBottom>
         Cadastrar nova Compra
       </Typography>
@@ -74,13 +71,14 @@ const OrdersForm = () => {
             value={values.amount}
           />
         </Grid>
-        <Grid container justify="space-around">
+        <Grid item xs={12} md={6}>
           <TextField
             id="datetime"
             name="datetime"
             label="Data"
             type="date"
             defaultValue={moment(values.datetime).format('DD/MM/YYYY')}
+            fullWidth
             onChange={onchange}
             InputLabelProps={{
               shrink: true,

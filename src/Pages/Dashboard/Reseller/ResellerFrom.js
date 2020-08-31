@@ -11,7 +11,6 @@ const ResellerForm = () => {
   const [ error, setError ] = useState(null);
   const [ token, setToken ] = useState(null);
   const [values, setValues] = useState({});
-  const history = useHistory();
   
   const onchange = e => {
     const { value, name } = e.target;
@@ -36,7 +35,7 @@ const ResellerForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <Typography variant="h6" gutterBottom>
         Cadastrar Revendedor
       </Typography>

@@ -145,15 +145,15 @@ const Menu = ({ children }) => {
         </div>
         <Divider />
         <List>
-          <ListItem button onClick={() => history.push('/dashboard/reseller/new')} key="Cadastrar Revendedor">
+          <ListItem button onClick={() => history.push('/dashboard/reseller/new')} key="cadastrar-revendedor">
             <ListItemIcon>{getIcon[0]}</ListItemIcon>
             <ListItemText primary="Cadastrar Revendedor" />
           </ListItem>
-          <ListItem button onClick={() => history.push('/dashboard/orders')} key="Ver Compras">
+          <ListItem button onClick={() => history.push('/dashboard/orders')} key="ver-compras">
             <ListItemIcon>{getIcon[1]}</ListItemIcon>
             <ListItemText primary="Ver Compras" />
           </ListItem>
-          <ListItem button onClick={() => history.push('/dashboard/orders/new')} key="Cadastrar Compra">
+          <ListItem button onClick={() => history.push('/dashboard/orders/new')} key="cadastrar-compra">
             <ListItemIcon>{getIcon[2]}</ListItemIcon>
             <ListItemText primary="Cadastrar Compra" />
           </ListItem>

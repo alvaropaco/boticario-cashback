@@ -20,16 +20,18 @@ const useStyles = makeStyles((theme) => ({
 
 const Orders = () => {
   const [values, setValues] = useState([])
-  const history = useHistory();
   const classes = useStyles();
 
-  useEffect(
-    async () => {
-      const { orders } = await loadOrders()
-      await setValues(orders)
+  useEffect(() => {
+      fetchData();
     },
     []
   );
+
+  const fetchData = async () => {
+    const { orders } = await loadOrders()
+    await setValues(orders)
+  }
 
   function formatCurrency(numberStr){
     const number = +numberStr;
@@ -57,11 +59,11 @@ const Orders = () => {
     orders = orders || []
     return (<List className={classes.root}>
         {orders.map(order => 
-          <ListItem alignItems="flex-start">
+          <ListItem key={order.id} alignItems="flex-start">
             <Divider variant="inset" component="li" />
             <ListItemText
               primary={`${getDateStr(order.datetime)} - ${order.code} (${getStatusLabel(order.status)})`}
-              secondary={<><p>{`Total: R$ ${formatCurrency(order.amount)}`}</p><p>{` Cashback: R$ ${getCashBackAmount(order.amount, order.cashBackPercent)} (${order.cashBackPercent}%)`}</p></>}
+              secondary={`Total: R$ ${formatCurrency(order.amount)} - Cashback: R$ ${getCashBackAmount(order.amount, order.cashBackPercent)} (${order.cashBackPercent}%)`}
             />
           </ListItem>
           )}
