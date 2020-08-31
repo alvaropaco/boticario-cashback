@@ -58,6 +58,27 @@
       "email": "olivier@mail.com",
       "password": "$2a$10$OC3OgqsohHlk2rlJIubWqeuSFvdqwnR5Y6TNf6CmxCOp39uR/EGRq",
       "id": 1
+    },
+    {
+      "email": "alvaropaconeto@gmail.com",
+      "password": "$2a$10$iNis7RcxYdDcBClDvQSBzOK30fpbhDiTSJ.adQm07GqlOO2pBroz6",
+      "nome": "ALVARO AUGUSTO PACO NETO",
+      "cpf": "368.666.748-75",
+      "id": 2
+    },
+    {
+      "email": "diana@diana.com",
+      "password": "$2a$10$fDG0cLTvHk/8onwGWVIhQeZRRjp7mkCE0fkGytpxEG4w/fl.2wntO",
+      "nome": "Diana",
+      "cpf": "548.273.152-99",
+      "id": 3
+    },
+    {
+      "email": "r@r.com",
+      "password": "$2a$10$XQKx6xk8EMeGp4gmUTssTOMfNGlP3IZdDMJKkuU1itzlld/CTaqM6",
+      "nome": "Regina",
+      "cpf": "117.917.401-11",
+      "id": 4
     }
   ]
 }
