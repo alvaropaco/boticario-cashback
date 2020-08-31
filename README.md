@@ -14,22 +14,22 @@ agrupa e consolida todas as vendas do revendedor(a).
 
 ## Como executar
 
-No repositorio do porjeto:
+### No repositorio do porjeto:
 
-### `npm run start`
+##### `npm run start`
 
 Roda a aplicação em modo de desenvolvimento. O comando vai subir uma `API`de mock do endereço
 `http://localhost:3004` carregando os dados de um arquivo JSON localizado na pasta `./data/db.json`.
 <br />
 Após executar, vá [http://localhost:3000](http://localhost:3000) para abrir o projeto.
 
-### Login
+##### Login
 
 Você pode executar o login com as credenciais de teste:
 - email: teste@teste.com
 - senha: 1234
 
-### `npm test`
+##### `npm run test`
 
 Executa os testes integrados.
 
